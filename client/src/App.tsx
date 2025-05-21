@@ -13,6 +13,7 @@ import ResearchPublications from "./pages/research/ResearchPublication";
 import AwardWinningProjects from "./pages/research/AwardProjects";
 import ContactPage from "./pages/contact/ContactUs";
 import PrivacyPolicy from "./pages/legal/PrivacyPolicy";
+import TermsAndConditions from "./pages/legal/TermsAndConditions"
 
 
 
@@ -44,6 +45,8 @@ export default function App() {
 
         {/* Legal  */}
         <Route path="/privacy-policy" element={ <PrivacyPolicy /> } />
+         <Route path="/terms-and-conditions" element={ <TermsAndConditions /> } />
+        
 
 
 

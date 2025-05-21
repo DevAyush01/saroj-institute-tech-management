@@ -58,7 +58,7 @@ const Footer: React.FC = () => {
             <div className="h-px bg-gray-300 w-full mb-4"></div>
             
             <div className="flex flex-col space-y-4">
-              <a href="#" className="hover:underline">Privacy Policy</a>
+              <a href="/privacy-policy" className="hover:underline">Privacy Policy</a>
               <a href="#" className="hover:underline">Terms and Conditions</a>
             </div>
           </section>

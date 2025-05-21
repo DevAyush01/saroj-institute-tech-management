@@ -111,14 +111,25 @@ export default function PrivacyPolicy() {
                                     <h3 className="text-2xl text-blue-700 font-bold my-5">#{policies.indexOf(policy) + 1}. {policy.policyTitle}</h3>
 
 
-                                    {policy.bulletPoints.map(point =>
-                                        <p className="text-base leading-8 my-5 ">
-                                            <span className=" text-blue-900 " >
-                                                •
-                                            </span>
-                                            {point}
-                                        </p>
-                                    )}
+                                    {policy.bulletPoints.map((point, index) => {
+                                        if (point.includes(":")) {
+                                            const [bold, ...rest] = point.split(/:(.+)/)
+                                            return (
+                                                <p key={index} className="text-base leading-8 my-5">
+                                                    <span className="text-blue-900">• </span>
+                                                    <strong>{bold}:</strong> {rest.join('')}
+                                                </p>
+                                            )
+                                        } else {
+                                            return (
+                                                <p key={index} className="text-base leading-8 my-5">
+                                                    <span className="text-blue-900">• </span> {point}
+                                                </p>
+                                            )
+                                        }
+                                    })}
+
+
 
                                 </>
 
