@@ -1,0 +1,41 @@
+@import "tailwindcss";
+@import './css/fonts.css';
+
+.bg-primary {
+    background-color: #8e0028;
+  }
+  
+  .text-primary {
+    color: #8e0028;
+  }
+  
+  .border-primary {
+    border-color: #8e0028;
+  }
+  
+  .bg-secondary {
+    background-color: #f39c12;
+  }
+  
+  .text-secondary {
+    color: #f39c12;
+  }
+  
+  .border-secondary {
+    border-color: #f39c12;
+  }
+
+  .font-playfair {
+    font-family: 'PlayfairDisplay', serif;
+  }
+  
+  .font-abril {
+    font-family: 'AbrilFatface', cursive;
+  }
+  
+  .font-cookie {
+    font-family: 'Cookie', cursive;
+  }
+  .font-josif {
+    font-family: 'JosefinSans', sans-serif;
+   }
