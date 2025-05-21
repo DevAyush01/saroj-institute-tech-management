@@ -12,6 +12,7 @@ import TechnologiesPage from "./pages/research/TechnologiesDeveloped";
 import ResearchPublications from "./pages/research/ResearchPublication";
 import AwardWinningProjects from "./pages/research/AwardProjects";
 import ContactPage from "./pages/contact/ContactUs";
+import PrivacyPolicy from "./pages/legal/PrivacyPolicy";
 
 
 
@@ -19,32 +20,34 @@ export default function App() {
   return (
     <Routes>
       <Route path="/" element={<Layout />} >
-        
-        <Route index element={<Home />} />  
+
+        <Route index element={<Home />} />
         {/* About us  */}
         <Route path="/about" element={<About />} />
-        <Route path="/chairman-message" element={<ChairmanMessage/>}/>
-        <Route path="/vision-and-mission" element={<VisionMissionPage/>}/>
+        <Route path="/chairman-message" element={<ChairmanMessage />} />
+        <Route path="/vision-and-mission" element={<VisionMissionPage />} />
 
         {/* Academics  */}
-        <Route path="/courses-offered" element={<CoursesOffered/>}/>
-        <Route path="/departments" element={<DepartmentPage/>}/>
-        <Route path="/central-library" element={<CentralLibraryPage/>}/>
+        <Route path="/courses-offered" element={<CoursesOffered />} />
+        <Route path="/departments" element={<DepartmentPage />} />
+        <Route path="/central-library" element={<CentralLibraryPage />} />
 
         {/* R & D  */}
 
-        <Route path="/research-development" element={<RDPage/>}/>
-        <Route path="/technologies-developed" element={<TechnologiesPage/>}/>
-        <Route path="/awards-projects" element={<ResearchPublications/>}/>
-        <Route path="/research-publications" element={<AwardWinningProjects/>}/>
+        <Route path="/research-development" element={<RDPage />} />
+        <Route path="/technologies-developed" element={<TechnologiesPage />} />
+        <Route path="/awards-projects" element={<ResearchPublications />} />
+        <Route path="/research-publications" element={<AwardWinningProjects />} />
 
         {/* Contact us  */}
-        <Route path="/contact-us" element={<ContactPage/>}/>
+        <Route path="/contact-us" element={<ContactPage />} />
 
-        
+        {/* Legal  */}
+        <Route path="/privacy-policy" element={ <PrivacyPolicy /> } />
 
-     
+
+
       </Route>
     </Routes>
-    )
+  )
 }
