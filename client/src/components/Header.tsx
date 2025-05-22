@@ -57,7 +57,7 @@ const navLinks = [
     title: "Admission",
     to: "/",
     subLinks: [
-      { title: "Admission Process", to: "/admission/admission-process" },
+      { title: "Admission Process", to: "/admission-process" },
       { title: "Eligibility Criteria", to: "/admission/eligibility" },
       { title: "Fee Structure", to: "/" },
     ],
@@ -440,7 +440,7 @@ export const Header = () => {
                     >
                       <div className="p-2 space-y-1">
                         <Link
-                          to="/admission/admission-process"
+                          to="/admission-process"
                           className="flex items-center px-4 py-3 text-sm font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md transition-colors group"
                           onClick={closeAllDropdowns}
                         >
