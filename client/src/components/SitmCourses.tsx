@@ -1,6 +1,17 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { BtechImg } from "../assets/images";
+
+
+// Course Images
+import btechImage from '../assets/images/courseImages/btech.jpg';
+import bpharmaImage from '../assets/images/courseImages/bpharma.jpg';
+import diplomaImage from '../assets/images/courseImages/diploma.jpg';
+import mbaImage from '../assets/images/courseImages/mba.jpg';
+import mcaImage from '../assets/images/courseImages/mca.jpg';
+import mpharmaImage from '../assets/images/courseImages/mpharma.jpg';
+import mtechImage from '../assets/images/courseImages/mtech.jpg';
+
+
 
 const SitmCourses = () => {
   const navigate = useNavigate();
@@ -12,41 +23,41 @@ const SitmCourses = () => {
     undergraduate: [
       {
         title: "B.Tech (Bachelor of Technology)",
-        img: BtechImg,
+        img: btechImage,
         path: "/courses/btech",
       },
       {
         title: "B.Pharma (Bachelor of Pharmacy)",
-        img: BtechImg,
+        img: bpharmaImage,
         path: "/courses/bpharma",
       },
     ],
     postgraduate: [
       {
         title: "M.Tech (Master of Technology)",
-        img: BtechImg,
+        img: mtechImage,
         path: "/courses/mtech",
       },
       {
         title: "M.Pharm (Master of Pharmacy)",
-        img: BtechImg,
+        img: mpharmaImage,
         path: "/courses/mpharm",
       },
       {
         title: "MBA (Master of Business Administration)",
-        img: BtechImg,
+        img: mbaImage,
         path: "/courses/mba",
       },
       {
         title: "MCA (Master of Computer Application)",
-        img: BtechImg,
+        img: mcaImage,
         path: "/courses/mca",
       },
     ],
     diploma: [
       {
         title: "Diploma Programme",
-        img: BtechImg,
+        img: diplomaImage,
         path: "/courses/diploma",
       },
     ],
@@ -58,13 +69,13 @@ const SitmCourses = () => {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-red-700 font-bold text-lg uppercase tracking-wider mb-2">
+          <h2 className="text-sky-600 font-bold text-lg uppercase tracking-wider mb-2">
             Courses Offered @SITM
           </h2>
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Academic Programs
           </h1>
-          <div className="w-24 h-1 bg-red-600 mx-auto"></div>
+          <div className="w-24 h-1 bg-sky-600 mx-auto"></div>
         </div>
 
         {/* Tabs */}
@@ -74,7 +85,7 @@ const SitmCourses = () => {
               type="button"
               className={`sm:px-2 md:px-6 py-3 text-sm font-medium rounded-l-lg ${
                 activeTab === "undergraduate"
-                  ? "bg-red-700 text-white"
+                  ? "bg-sky-600 text-white"
                   : "bg-white text-gray-900 hover:bg-gray-100"
               }`}
               onClick={() => setActiveTab("undergraduate")}
@@ -85,7 +96,7 @@ const SitmCourses = () => {
               type="button"
               className={`sm:px-2 md:px-6 py-3 text-sm font-medium ${
                 activeTab === "postgraduate"
-                  ? "bg-red-700 text-white"
+                  ? "bg-sky-600 text-white"
                   : "bg-white text-gray-900 hover:bg-gray-100"
               }`}
               onClick={() => setActiveTab("postgraduate")}
@@ -96,7 +107,7 @@ const SitmCourses = () => {
               type="button"
               className={`sm:px-2 md:px-6 py-3 text-sm font-medium rounded-r-lg ${
                 activeTab === "diploma"
-                  ? "bg-red-700 text-white"
+                  ? "bg-sky-600 text-white"
                   : "bg-white text-gray-900 hover:bg-gray-100"
               }`}
               onClick={() => setActiveTab("diploma")}
@@ -113,7 +124,7 @@ const SitmCourses = () => {
               key={course.title}
               className="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-lg"
             >
-              <div className="h-48 overflow-hidden">
+              <div className=" overflow-hidden">
                 <img
                   src={course.img}
                   alt={course.title}
@@ -125,10 +136,10 @@ const SitmCourses = () => {
                   {course.title}
                 </h3>
                 <Link
-                 to={course.path}
-                  className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-red-700 hover:bg-red-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 transition-colors duration-300"
+                 to={"https://seglko.in8.nopaperforms.com/"}
+                  className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-sky-600 hover:bg-sky-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-500 transition-colors duration-300"
                 >
-                  Read More
+                  Register Now
                   <svg
                     className="ml-2 -mr-1 w-4 h-4"
                     fill="currentColor"
