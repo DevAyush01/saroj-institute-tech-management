@@ -467,7 +467,7 @@ export const Header = () => {
                           </div>
                           <div className="ml-3">
                             <Link  to="/admission-process/" className="text-sm font-medium">
-                              Eligibility  Criteria 
+                              Eligibility Criteria 
                             </Link>
                             <p className="text-xs text-gray-500">
                               Requirements
