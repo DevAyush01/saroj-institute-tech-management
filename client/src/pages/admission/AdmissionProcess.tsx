@@ -9,8 +9,8 @@ const AdmissionProcess = () => {
           <p className="mt-4 text-sm leading-7 text-gray-500 font-regular">
             STEPS
           </p>
-          <h3 className="text-3xl sm:text-5xl leading-normal font-extrabold tracking-tight text-gray-900">
-            Admission Process <span className="text-sky-600">@ SITM</span>
+          <h3  className="text-3xl sm:text-5xl leading-normal font-extrabold tracking-tight text-gray-900">
+            Admission Process <span className="text-indigo-600">@ SITM</span>
           </h3>
         </div>
 
@@ -19,14 +19,14 @@ const AdmissionProcess = () => {
             <li className="bg-gray-100 p-5 pb-10 text-center mb-20">
               <div className="flex flex-col items-center">
                 <div className="flex-shrink-0 relative top-0 -mt-16">
-                  <div className="flex items-center justify-center h-20 w-20 rounded-full bg-sky-500 text-white border-4 border-white text-xl font-semibold">
+                  <div className="flex items-center justify-center h-20 w-20 rounded-full bg-indigo-500 text-white border-4 border-white text-xl font-semibold">
                     1
                   </div>
                 </div>
                 <div className="mt-4">
                   <h4 className="text-lg leading-6 font-semibold text-gray-900">Online Registration</h4>
                   <p className="mt-2 text-base leading-6 text-gray-500">
-                    Visit <a className="  text-blue-600 font-bold " href="https://seglko.in8.nopaperforms.com/" >Register Page</a> and fill the online registration form with accurate academic and personal details.
+                    Visit seglko.org/sitm and fill the online registration form with accurate academic and personal details.
                   </p>
                 </div>
               </div>
@@ -35,7 +35,7 @@ const AdmissionProcess = () => {
             <li className="bg-gray-100 p-5 pb-10 text-center mb-20">
               <div className="flex flex-col items-center">
                 <div className="flex-shrink-0 relative top-0 -mt-16">
-                  <div className="flex items-center justify-center h-20 w-20 rounded-full bg-sky-500 text-white border-4 border-white text-xl font-semibold">
+                  <div className="flex items-center justify-center h-20 w-20 rounded-full bg-indigo-500 text-white border-4 border-white text-xl font-semibold">
                     2
                   </div>
                 </div>
@@ -51,7 +51,7 @@ const AdmissionProcess = () => {
             <li className="bg-gray-100 p-5 pb-10 text-center mb-20">
               <div className="flex flex-col items-center">
                 <div className="flex-shrink-0 relative top-0 -mt-16">
-                  <div className="flex items-center justify-center h-20 w-20 rounded-full bg-sky-500 text-white border-4 border-white text-xl font-semibold">
+                  <div className="flex items-center justify-center h-20 w-20 rounded-full bg-indigo-500 text-white border-4 border-white text-xl font-semibold">
                     3
                   </div>
                 </div>
@@ -67,7 +67,7 @@ const AdmissionProcess = () => {
             <li className="bg-gray-100 p-5 pb-10 text-center mb-20">
               <div className="flex flex-col items-center">
                 <div className="flex-shrink-0 relative top-0 -mt-16">
-                  <div className="flex items-center justify-center h-20 w-20 rounded-full bg-sky-500 text-white border-4 border-white text-xl font-semibold">
+                  <div className="flex items-center justify-center h-20 w-20 rounded-full bg-indigo-500 text-white border-4 border-white text-xl font-semibold">
                     4
                   </div>
                 </div>
@@ -83,7 +83,7 @@ const AdmissionProcess = () => {
             <li className="bg-gray-100 p-5 pb-10 text-center mb-20">
               <div className="flex flex-col items-center">
                 <div className="flex-shrink-0 relative top-0 -mt-16">
-                  <div className="flex items-center justify-center h-20 w-20 rounded-full bg-sky-500 text-white border-4 border-white text-xl font-semibold">
+                  <div className="flex items-center justify-center h-20 w-20 rounded-full bg-indigo-500 text-white border-4 border-white text-xl font-semibold">
                     5
                   </div>
                 </div>
@@ -99,7 +99,7 @@ const AdmissionProcess = () => {
             <li className="bg-gray-100 p-5 pb-10 text-center mb-20">
               <div className="flex flex-col items-center">
                 <div className="flex-shrink-0 relative top-0 -mt-16">
-                  <div className="flex items-center justify-center h-20 w-20 rounded-full bg-sky-500 text-white border-4 border-white text-xl font-semibold">
+                  <div className="flex items-center justify-center h-20 w-20 rounded-full bg-indigo-500 text-white border-4 border-white text-xl font-semibold">
                     6
                   </div>
                 </div>
@@ -111,9 +111,22 @@ const AdmissionProcess = () => {
                 </div>
               </div>
             </li>
-
           </ul>
         </div>
+
+        <div className=" pb-20">
+          <h3  className="text-2xl font-bold text-gray-900 mb-4">Admission Criteria</h3>
+          <div className="bg-gray-100 p-6 rounded-lg">
+            <ul className="list-disc list-inside text-gray-700 space-y-2">
+              <li>Minimum 45% marks in 10+2 with PCM (Physics, Chemistry, Mathematics) for B.Tech programs.</li>
+              <li>Valid scores in JEE Main / UPSEE or institute entrance test.</li>
+              <li>Direct admission available under management quota as per eligibility.</li>
+              <li>Postgraduate applicants must have a relevant undergraduate degree.</li>
+            </ul>
+          </div>
+        </div>
+
+        
 
       </div>
     </div>

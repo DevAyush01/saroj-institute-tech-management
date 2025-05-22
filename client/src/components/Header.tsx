@@ -57,8 +57,8 @@ const navLinks = [
     title: "Admission",
     to: "/",
     subLinks: [
-      { title: "Admission Process", to: "/admission-process" },
-      { title: "Eligibility Criteria", to: "/admission/eligibility" },
+      { title: "Admission Process", to: "/admission-process/" },
+      { title: "Eligibility Criteria", to: "/admission-process/" },
       { title: "Fee Structure", to: "/" },
     ],
   },
@@ -458,7 +458,7 @@ export const Header = () => {
                         </Link>
 
                         <Link
-                          to="/admission/eligibility"
+                          to="/admission-process/"
                           className="flex items-center px-4 py-3 text-sm font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md transition-colors group"
                           onClick={closeAllDropdowns}
                         >
@@ -466,9 +466,9 @@ export const Header = () => {
                             <FaPersonCircleCheck className="w-full h-full" />
                           </div>
                           <div className="ml-3">
-                            <p className="text-sm font-medium">
+                            <Link  to="/admission-process/" className="text-sm font-medium">
                               Eligibility Criteria
-                            </p>
+                            </Link>
                             <p className="text-xs text-gray-500">
                               Requirements
                             </p>
