@@ -185,7 +185,7 @@ const About: React.FC = () => {
             <span className="block">Join SITM today.</span>
           </h2>
           <p className="mt-4 text-lg leading-6 text-blue-200">
-            Applications for the date academic year {year} - {year+1} are now open.
+            Applications for the date academic year {year}-{year+1} are now open.
           </p>
           <a
             href="https://seglko.in8.nopaperforms.com/"
