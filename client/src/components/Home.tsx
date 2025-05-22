@@ -8,7 +8,7 @@ export default function Home() {
     <>
     <AboutSITM/>
     <SitmCourses/>
-    <NoticeSection/>
+    {/* <NoticeSection/> */}
     <PlacementSection/>
 
     </>

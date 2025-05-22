@@ -1,5 +1,6 @@
 import React from 'react';
-import { FaPhone, FaEnvelope } from 'react-icons/fa';
+import { FaPhone, FaEnvelope, FaPhoneAlt } from 'react-icons/fa';
+
 
 const Footer: React.FC = () => {
   return (
@@ -41,13 +42,13 @@ const Footer: React.FC = () => {
             
             <div className="space-y-2">
               <p className="flex items-center">
-                <FaPhone className="mr-2" /> 0522 - 3116178, 9555699988
+                <FaPhoneAlt className="mr-2" /> 0522 - 3116178, 9555699988
               </p>
               <p className="flex items-center">
                 <FaEnvelope className="mr-2" /> admission.cell@segiko.org
               </p>
               <p className="flex items-center">
-                <FaPhone className="mr-2" /> Toll Free No: 1800-180-7886
+                <FaPhoneAlt className="mr-2" /> Toll Free No: 1800-180-7886
               </p>
             </div>
           </section>

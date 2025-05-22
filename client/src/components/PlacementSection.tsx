@@ -44,21 +44,21 @@ export const PlacementSection = () => {
     <div className="bg-gray-50 min-h-screen py-8 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         {/* Header with Institute Info */}
-        <div className="bg-white shadow-md rounded-lg p-6 mb-8 border-l-4 border-blue-600">
-          <h1 className="text-3xl font-bold text-center text-blue-800 mb-4">
+        <div className="bg-white shadow-md rounded-lg p-6 mb-8 border-l-4 border-sky-600">
+          <h1 className="text-3xl font-bold text-center text-sky-600 mb-4">
             SAROJ INSTITUTE OF TECHNOLOGY & MANAGEMENT (SITM), LUCKNOW
           </h1>
           <p className="text-center text-gray-600 mb-2">
-            Alabama n o 0, Aylapangi Stationer Road, Lucknow
+            Ahimamau, Arjunganj, Sultanpur Road, Lucknow, Uttar Pradesh, India, 226001
           </p>
           <p className="text-center text-gray-600">
-            Phone no: (0522) 2812731, 3092869, 2832760 | Fax: (0522) 2812780 | E-mail: simba@aliy.com
+            <span className=' font-bold ' >Phone no:</span> 0522-3116178, 9555699988 |  <span className=' font-bold ' >E-mail:</span> admission.cell@seglko.org
           </p>
         </div>
 
         {/* Placement Section Title */}
         <div className="flex justify-between items-center mb-6">
-          <h2 className="text-2xl font-bold text-gray-800">Placement Records</h2>
+          <h2 className="text-2xl font-bold text-gray-600">Placement Records</h2>
           
         </div>
 
@@ -68,7 +68,7 @@ export const PlacementSection = () => {
             <div key={index} className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
               <div className="text-3xl mb-2">{stat.icon}</div>
               <h3 className="text-lg font-semibold text-gray-700">{stat.title}</h3>
-              <p className="text-2xl font-bold text-blue-600">{stat.value}</p>
+              <p className="text-2xl font-bold text-sky-600">{stat.value}</p>
             </div>
           ))}
         </div>
@@ -79,7 +79,7 @@ export const PlacementSection = () => {
 
         {/* Upcoming Drives Section */}
         <div className="mt-12">
-          <h2 className="text-2xl font-bold text-gray-800 mb-6">Upcoming Placement Drives</h2>
+          <h2 className="text-2xl font-bold text-gray-600 mb-6">Upcoming Placement Drives</h2>
           <div className="bg-white rounded-lg shadow-sm overflow-hidden">
             <table className="min-w-full divide-y divide-gray-200">
               <thead className="bg-gray-50">
@@ -96,10 +96,10 @@ export const PlacementSection = () => {
                   <td className="px-6 py-4 whitespace-nowrap">
                     <div className="flex items-center">
                       <div className="flex-shrink-0 h-10 w-10">
-                        <img className="h-10 w-10 object-contain" src="https://logo.clearbit.com/google.com" alt="Google" />
+                        <img className="h-10 w-10 object-contain" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Accenture.svg/1200px-Accenture.svg.png" alt="Google" />
                       </div>
                       <div className="ml-4">
-                        <div className="text-sm font-medium text-gray-900">Google</div>
+                        <div className="text-sm font-medium text-gray-900">Accenture</div>
                       </div>
                     </div>
                   </td>
@@ -107,17 +107,17 @@ export const PlacementSection = () => {
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">CGPA ≥ 8.0</td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Software Engineer</td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                    <a href="#" className="text-blue-600 hover:text-blue-900">Register</a>
+                     <button disabled className="text-gray-400">Register <span>(Sarting Soon)</span></button>
                   </td>
                 </tr>
                 <tr className="hover:bg-gray-50">
                   <td className="px-6 py-4 whitespace-nowrap">
                     <div className="flex items-center">
                       <div className="flex-shrink-0 h-10 w-10">
-                        <img className="h-10 w-10 object-contain" src="https://logo.clearbit.com/adobe.com" alt="Adobe" />
+                        <img className="h-10 w-10 object-contain" src="https://discover.give.do/static/img/logos/19WJ/9aad65c4-4ada-437d-a056-cd099c1e88ef.png" alt="Adobe" />
                       </div>
                       <div className="ml-4">
-                        <div className="text-sm font-medium text-gray-900">Adobe</div>
+                        <div className="text-sm font-medium text-gray-900">TCS</div>
                       </div>
                     </div>
                   </td>
@@ -125,7 +125,7 @@ export const PlacementSection = () => {
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">CGPA ≥ 7.5</td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Product Developer</td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                    <a href="#" className="text-blue-600 hover:text-blue-900">Register</a>
+                     <button disabled className="text-gray-400">Register <span>(Sarting Soon)</span></button>
                   </td>
                 </tr>
               </tbody>
@@ -140,7 +140,7 @@ export const PlacementSection = () => {
               <div className="p-6">
                 <div className="flex justify-between items-start mb-4">
                   <div>
-                    <h2 className="text-2xl font-bold text-gray-800">{selectedPlacement.company}</h2>
+                    <h2 className="text-2xl font-bold text-gray-600">{selectedPlacement.company}</h2>
                     <p className="text-gray-500">{selectedPlacement.date}</p>
                   </div>
                   <button 
@@ -161,7 +161,7 @@ export const PlacementSection = () => {
                   </div>
                   <div className="md:w-2/3 md:pl-6">
                     <div className="grid grid-cols-2 gap-4 mb-4">
-                      <div className="bg-blue-50 p-3 rounded-lg">
+                      <div className="bg-sky-50 p-3 rounded-lg">
                         <p className="text-sm text-gray-500">Students Placed</p>
                         <p className="text-xl font-bold">{selectedPlacement.studentsPlaced}</p>
                       </div>
@@ -183,7 +183,7 @@ export const PlacementSection = () => {
                 </div>
                 
                 <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6">
-                  <h3 className="font-bold text-yellow-800 mb-2">Student Testimonials</h3>
+                  <h3 className="font-bold text-yellow-600 mb-2">Student Testimonials</h3>
                   <p className="text-gray-700 italic">"The placement process was very well organized. The training sessions conducted by the placement cell helped me prepare thoroughly for the interviews."</p>
                   <p className="text-sm text-gray-500 mt-2">- Rahul Sharma, Placed at {selectedPlacement.company}</p>
                 </div>
