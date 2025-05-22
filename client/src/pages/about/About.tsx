@@ -2,6 +2,8 @@ import React from 'react';
 import chairmanImg from '../../assets/ChairmanImg.jpg';
 
 const About: React.FC = () => {
+  const date = new Date()
+  let year = date.getFullYear();
   return (
     <div className="bg-gray-50">
       {/* Hero Section */}
@@ -131,29 +133,17 @@ const About: React.FC = () => {
             </p>
           </div>
 
-          <div className="mt-10 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 grid grid-cols-1 gap-10 sm:grid-cols-1 lg:grid-cols-1">
             {[
               {
                 name: 'Mr. Sunil Singh',
                 role: 'Chairman',
                 description: 'Education visionary with 25+ years in academic leadership',
                 img: chairmanImg,
-              },
-              {
-                name: 'Prof. Anita Verma',
-                role: 'Director',
-                description: 'PhD in Computer Science with extensive industry experience',
-                img: 'https://randomuser.me/api/portraits/women/44.jpg',
-              },
-              {
-                name: 'Dr. Sanjay Gupta',
-                role: 'Dean Academics',
-                description: 'Specialized in curriculum development and quality assurance',
-                img: 'https://randomuser.me/api/portraits/men/75.jpg',
-              },
+              }
             ].map((person) => (
               <div key={person.name} className="flex flex-col items-center text-center">
-                <img className="h-40 w-40 rounded-full object-cover" src={person.img} alt={person.name} />
+                <img className="h-64 w-64 rounded-2xl object-cover" src={person.img} alt={person.name} />
                 <h3 className="mt-4 text-lg font-medium text-gray-900">{person.name}</h3>
                 <p className="text-blue-600">{person.role}</p>
                 <p className="mt-2 text-gray-500">{person.description}</p>
@@ -172,13 +162,13 @@ const About: React.FC = () => {
             </h2>
             <div className="mt-6 flex flex-wrap justify-center gap-8">
               {[
-                { name: 'AICTE', logo: '🏛️' },
-                { name: 'UGC', logo: '📜' },
-                { name: 'NAAC Accredited', logo: '⭐' },
-                { name: 'Affiliated to AKTU', logo: '🔗' },
+                { name: 'AICTE', logo: 'https://upload.wikimedia.org/wikipedia/en/e/eb/All_India_Council_for_Technical_Education_logo.png' },
+                { name: 'UGC', logo: 'https://upload.wikimedia.org/wikipedia/en/4/4e/UGC_India_Logo.png' },
+                { name: 'NAAC Accredited', logo: 'https://upload.wikimedia.org/wikipedia/en/1/1d/NAAC_LOGO.png' },
+                { name: 'Affiliated to AKTU', logo: 'https://upload.wikimedia.org/wikipedia/en/9/98/Dr._A.P.J._Abdul_Kalam_Technical_University_logo.png' },
               ].map((item) => (
                 <div key={item.name} className="flex flex-col items-center">
-                  <div className="text-4xl mb-2">{item.logo}</div>
+                  <div className="text-4xl mb-2  "> <img className='h-16' src={item.logo} ></img> </div>
                   <span className="text-gray-700 font-medium">{item.name}</span>
                 </div>
               ))}
@@ -195,10 +185,10 @@ const About: React.FC = () => {
             <span className="block">Join SITM today.</span>
           </h2>
           <p className="mt-4 text-lg leading-6 text-blue-200">
-            Applications for the 2023-24 academic year are now open.
+            Applications for the date academic year {year} - {year+1} are now open.
           </p>
           <a
-            href="#"
+            href="https://seglko.in8.nopaperforms.com/"
             className="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-blue-50 sm:w-auto"
           >
             Apply Now
