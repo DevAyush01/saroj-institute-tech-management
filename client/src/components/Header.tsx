@@ -548,7 +548,7 @@ export const Header = () => {
                           </div>
                         </Link>
 
-                        <Link
+                        {/* <Link
                           to="/academics/faculty"
                           className="flex items-center px-4 py-3 text-sm font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md transition-colors group"
                           onClick={closeAllDropdowns}
@@ -562,7 +562,7 @@ export const Header = () => {
                               Meet our professors
                             </p>
                           </div>
-                        </Link>
+                        </Link> */}
 
                         <Link
                           to="/courses-offered"
@@ -715,7 +715,7 @@ export const Header = () => {
 </li>
 
               {/* Simple Links */}
-              <li className="relative group">
+              {/* <li className="relative group">
                 <Link
                   to="/career"
                   className="flex items-center px-4 py-2 text-base hover:text-blue-600 transition-colors"
@@ -723,7 +723,7 @@ export const Header = () => {
                 >
                   Career
                 </Link>
-              </li>
+              </li> */}
 
               <li className="relative group">
                 <Link
