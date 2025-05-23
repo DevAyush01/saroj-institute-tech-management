@@ -1,74 +1,77 @@
-import React from 'react';
-import { FaPhone, FaEnvelope, FaPhoneAlt } from 'react-icons/fa';
+import React from "react";
+import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaPhoneSquareAlt, FaUniversity, FaGavel } from "react-icons/fa";
+import { IoIosArrowForward } from "react-icons/io";
+import { Link } from "react-router-dom";
+import Logo from "../assets/logo.png"
 
-
-const Footer: React.FC = () => {
+const Footer = () => {
   return (
-    <footer className="bg-gray-100 text-gray-800 py-8 px-4">
-      <div className="max-w-6xl mx-auto">
-        {/* Main content - 3 columns on large screens */}
-        <div className="flex flex-col lg:flex-row gap-8 mb-8">
-          {/* Quick Links Section */}
-          <section className="lg:flex-1">
-            <h2 className="text-xl font-bold mb-4">QUICK LINKS</h2>
-            <div className="h-px bg-gray-300 w-full mb-4"></div>
-            
-            <div className="mb-6 text-justify">
-              <h3 className="font-semibold mb-2">Saroj Institute of Technology and Management</h3>
-              <ul className="space-y-1 text-justify">
-                <li>• Saroj Institute of Technology & Management</li>
-                <li>• Shivdan Singh Institute of Technology & Management</li>
-                <li>• Saroj Institute of Management & Technology</li>
-                <li>• Lucknow Institute Of Pharmacy</li>
-                <li>• Saroj College Of Pharmacy</li>
-              </ul>
-            </div>
-            
-            <div className="h-px bg-gray-300 w-full mb-4"></div>
-            
-            <h3 className="font-semibold mb-2">Saroj Institute of Technology and Management (SITM)</h3>
-            <div className="h-px bg-gray-300 w-full my-4"></div>
-          </section>
+    <footer className="bg-sky-800 text-white py-10 px-5 md:px-20 mt-10">
+      <div className="grid md:grid-cols-4 gap-10">
 
-          {/* Contact Information */}
-          <section className="lg:flex-1">
-            <h2 className="text-xl font-bold mb-4">CONTACT US</h2>
-            <div className="h-px bg-gray-300 w-full mb-4"></div>
-            
-            <address className="not-italic mb-4">
-              <p> Ahimamau, Arjunganj, Sultanpur Road,</p>
-              <p>Lucknow, Uttar Pradesh, India, 226001</p>
-            </address>
-            
-            <div className="space-y-2">
-              <p className="flex items-center">
-                <FaPhoneAlt className="mr-2" /> 0522 - 3116178, 9555699988
-              </p>
-              <p className="flex items-center">
-                <FaEnvelope className="mr-2" /> admission.cell@segiko.org
-              </p>
-              <p className="flex items-center">
-                <FaPhoneAlt className="mr-2" /> Toll Free No: 1800-180-7886
-              </p>
-            </div>
-          </section>
-
-          {/* Legal Links */}
-          <section className="lg:flex-1">
-            <h2 className="text-xl font-bold mb-4">LEGAL</h2>
-            <div className="h-px bg-gray-300 w-full mb-4"></div>
-            
-            <div className="flex flex-col space-y-4">
-              <a href="/privacy-policy" className="hover:underline">Privacy Policy</a>
-              <a href="/terms-and-conditions" className="hover:underline">Terms and Conditions</a>
-            </div>
-          </section>
+        {/* Logo and Description */}
+        <div>
+          <div className="flex items-center space-x-3 mb-4">
+            <img src={Logo} alt="Logo" className="w-12 h-12" />
+            <h2 className="text-lg font-bold">Saroj Institute of Technology and Management</h2>
+          </div>
+          <p className="text-sm text-gray-400">Empowering Students Through Quality Education</p>
         </div>
 
-        {/* Copyright - full width below */}
-        <section className="text-center pt-6 border-t border-gray-300">
-          <p>© Copyright All Rights Reserved @ 2025 Saroj Institute of Technology and Management (SITM)</p>
-        </section>
+        {/* Quick Links */}
+        <div>
+          <h3 className="text-lg font-semibold mb-4 flex items-center gap-2"><IoIosArrowForward />Quick Links</h3>
+          <ul className="space-y-2 text-sm text-gray-300">
+            <li className="flex items-center gap-2"><IoIosArrowForward /> Saroj Institute of Technology & Management</li>
+            <li className="flex items-center gap-2"><IoIosArrowForward /> Shivdan Singh Institute of Technology & Management</li>
+            <li className="flex items-center gap-2"><IoIosArrowForward /> Saroj Institute of Management & Technology</li>
+            <li className="flex items-center gap-2"><IoIosArrowForward /> Lucknow Institute Of Pharmacy</li>
+            <li className="flex items-center gap-2"><IoIosArrowForward /> Saroj College Of Pharmacy</li>
+          </ul>
+        </div>
+
+        {/* Contact Info */}
+        <div>
+          <h3 className="text-lg font-semibold mb-4 flex items-center gap-2"><FaPhoneAlt />Contact Us</h3>
+          <div className="space-y-4 text-sm text-gray-300">
+            <div className="flex items-start gap-3">
+              <FaMapMarkerAlt className=" text-white mt-1" />
+              <p>
+                Ahimamau, Arjunganj, Sultanpur Road,<br />
+                Lucknow, Uttar Pradesh, India, 226001
+              </p>
+            </div>
+            <div className="flex items-start gap-3">
+              <FaPhoneAlt className="text-white mt-1" />
+              <p>
+                0522 - 3116178<br />
+                9555699988
+              </p>
+            </div>
+            <div className="flex items-start gap-3">
+              <FaEnvelope className="text-white mt-1" />
+              <p>admission.cell@segiko.org</p>
+            </div>
+            <div className="flex items-start gap-3">
+              <FaPhoneSquareAlt className="text-white mt-1" />
+              <p>Toll Free No: 1800-180-7886</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Legal */}
+        <div>
+          <h3 className="text-lg font-semibold mb-4 flex items-center gap-2"><FaGavel /> Legal</h3>
+          <ul className="space-y-2 text-sm text-gray-300">
+            <li className="flex items-center gap-2"><IoIosArrowForward /> <Link to="/privacy-policy">Privacy Policy</Link> </li>
+            <li className="flex items-center gap-2"><IoIosArrowForward /> <Link to="/terms-and-conditions" >Terms and Conditions</Link></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div className="text-center text-xs text-gray-300 mt-10">
+        © {new Date().getFullYear()} Saroj Educational Group. All rights reserved.
       </div>
     </footer>
   );
