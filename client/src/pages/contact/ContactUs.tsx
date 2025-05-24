@@ -220,6 +220,7 @@ export default function ContactPage() {
                     </label>
                     <div className="mt-1">
                       <input
+                      required
                         type="tel"
                         id="phone"
                         name="phone"
