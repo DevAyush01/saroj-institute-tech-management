@@ -15,6 +15,7 @@ import ContactPage from "./pages/contact/ContactUs";
 import PrivacyPolicy from "./pages/legal/PrivacyPolicy";
 import TermsAndConditions from "./pages/legal/TermsAndConditions"
 import AdmissionProcess from "./pages/admission/AdmissionProcess";
+import CompanyTieUps from "./components/CompanyTieUps";
 
 
 
@@ -50,6 +51,12 @@ export default function App() {
 
          {/* Admission  */}
          <Route path="/admission-process" element={ <AdmissionProcess/> } />
+
+
+
+         {/* Temp */}
+
+         <Route path="/temp" element={ <CompanyTieUps /> } />
         
 
 

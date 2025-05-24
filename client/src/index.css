@@ -1,5 +1,10 @@
 @import "tailwindcss";
 @import './css/fonts.css';
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+
+
 
 .bg-primary {
     background-color: #8e0028;
@@ -39,3 +44,4 @@
   .font-josif {
     font-family: 'JosefinSans', sans-serif;
    }
+
