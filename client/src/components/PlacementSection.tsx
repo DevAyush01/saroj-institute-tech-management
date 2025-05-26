@@ -85,7 +85,6 @@ export const PlacementSection = () => {
               <thead className="bg-gray-50">
                 <tr>
                   <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Company</th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Date</th>
                   <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Eligibility</th>
                   <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Roles</th>
                   <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Action</th>
@@ -103,7 +102,6 @@ export const PlacementSection = () => {
                       </div>
                     </div>
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">N/A</td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">CGPA ≥ 8.0</td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Software Engineer</td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
@@ -121,7 +119,6 @@ export const PlacementSection = () => {
                       </div>
                     </div>
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">N/A</td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">CGPA ≥ 7.5</td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Product Developer</td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">

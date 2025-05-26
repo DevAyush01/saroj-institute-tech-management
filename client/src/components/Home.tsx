@@ -10,10 +10,10 @@ export default function Home() {
     <>
     <MainSection />
     <AboutSITM/>
+    <CompaniesSlider />
     <SitmCourses/>
     {/* <NoticeSection/> */}
     <PlacementSection/>
-    <CompaniesSlider />
 
     </>
   )
