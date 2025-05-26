@@ -1,11 +1,13 @@
 import React from 'react';
 import chairmanImg from '../../assets/ChairmanImg.jpg';
+import MainSection from '../../components/MainSection';
 
 const About: React.FC = () => {
   const date = new Date()
   let year = date.getFullYear();
   return (
     <div className="bg-gray-50">
+      
       {/* Hero Section */}
       <div className="relative bg-blue-800 overflow-hidden">
         <div className="max-w-7xl mx-auto">

@@ -1,6 +1,11 @@
 @import "tailwindcss";
 @import './css/fonts.css';
 
+
+
+
+
+
 .bg-primary {
     background-color: #8e0028;
   }
@@ -39,3 +44,4 @@
   .font-josif {
     font-family: 'JosefinSans', sans-serif;
    }
+
