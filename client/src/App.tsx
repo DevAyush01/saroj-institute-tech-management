@@ -17,8 +17,6 @@ import TermsAndConditions from "./pages/legal/TermsAndConditions"
 import AdmissionProcess from "./pages/admission/AdmissionProcess";
 import CompanyTieUps from "./components/CompanyTieUps";
 
-import "slick-carousel/slick/slick.css"; 
-import "slick-carousel/slick/slick-theme.css";
 
 
 export default function App() {
