@@ -1,6 +1,6 @@
 import { MdOutlineArrowRight } from "react-icons/md";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Mousewheel } from 'swiper/modules';
+import { Navigation,FreeMode, Pagination, Mousewheel, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -56,29 +56,39 @@ export default function CompaniesSlider() {
 
     return (
         <div className="mt-16 px-4">
-            <Swiper
-                modules={[Navigation, Mousewheel]}
-                loop={true}
-                grabCursor={true}
-                mousewheel={true}
-                spaceBetween={0}
-                pagination={{ clickable: false }}
-                navigation={false}
-                breakpoints={{
-                    640: {
-                        slidesPerView: 1,
-                    },
-                    768: {
-                        slidesPerView: 1,
-                    },
-                    1024: {
-                        slidesPerView: 2,
-                    },
-                    1280: {
-                        slidesPerView: 3,
-                    },
-                }}
-            >
+           <Swiper
+  modules={[Mousewheel, FreeMode, Pagination]}
+  freeMode={true}                     // Enables smooth scrolling
+  grabCursor={true}                   // Shows hand cursor
+  mousewheel={{
+    forceToAxis: true,
+    releaseOnEdges: true,
+    sensitivity: 1,
+  }}
+  spaceBetween={20}
+  pagination={{
+    clickable: true,
+    dynamicBullets: true,
+  }}
+  navigation={false}
+  breakpoints={{
+    640: {
+      slidesPerView: 1.2,
+    },
+    768: {
+      slidesPerView: 1.5,
+    },
+    1024: {
+      slidesPerView: 2.2,
+    },
+    1280: {
+      slidesPerView: 3,
+    },
+  }}
+>
+
+
+
                 {companies.map((company, index) => (
                     <SwiperSlide key={index}>
                         <div className="flex flex-col md:flex-row shadow-md rounded-md overflow-hidden bg-white h-[450px]">

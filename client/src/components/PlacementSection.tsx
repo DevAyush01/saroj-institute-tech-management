@@ -103,7 +103,7 @@ export const PlacementSection = () => {
                       </div>
                     </div>
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">25 May 2025</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">N/A</td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">CGPA ≥ 8.0</td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Software Engineer</td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
@@ -121,7 +121,7 @@ export const PlacementSection = () => {
                       </div>
                     </div>
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">5 June 2025</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">N/A</td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">CGPA ≥ 7.5</td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Product Developer</td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
