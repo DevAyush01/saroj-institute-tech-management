@@ -268,7 +268,7 @@ const Header = () => {
     },
     {
       title: "Contact",
-      to: "/contact",
+      to: "/contact-us",
       simple: true,
     },
   ]
@@ -297,7 +297,7 @@ const Header = () => {
           </motion.div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-1">
+          <nav className="hidden xl:flex items-center space-x-1">
             {navItems.map((item, index) => (
               <div key={index} className="relative group">
                 {item.simple ? (
@@ -427,7 +427,7 @@ const Header = () => {
           </nav>
 
           {/* Mobile Menu Button */}
-          <div className="lg:hidden flex items-center space-x-4">
+          <div className="xl:hidden flex items-center space-x-4">
           
 
             <motion.button

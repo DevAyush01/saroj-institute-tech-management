@@ -44,7 +44,6 @@ const Footer = () => {
             <div className="flex items-start gap-3">
               <FaPhoneAlt className="text-white mt-1" />
               <p>
-                0522 - 3116178<br />
                 9555699988
               </p>
             </div>

@@ -15,16 +15,17 @@ import {
 } from "lucide-react"
 import { useRef } from "react"
 import HeroBg from "../assets/HeroBanner1.jpg"
+import { Link } from "react-router-dom"
 
 export default function Component() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, amount: 0.2 })
 
   const stats = [
-    { icon: GraduationCap, value: "20+", label: "Years of Experience", color: "text-blue-500" },
+    { icon: GraduationCap, value: "25+", label: "Years of Experience", color: "text-blue-500" },
     { icon: Briefcase, value: "100%", label: "Placement Assistance", color: "text-emerald-500" },
-    { icon: Users, value: "50+", label: "Expert Faculty", color: "text-purple-500" },
-    { icon: Globe, value: "10,000+", label: "Alumni Network", color: "text-orange-500" },
+    { icon: Users, value: "5000+", label: "Expert Faculty", color: "text-purple-500" },
+    { icon: Globe, value: "34,000+", label: "Alumni Network", color: "text-orange-500" },
     { icon: FlaskConical, value: "15+", label: "Research Labs", color: "text-indigo-500" },
     { icon: Rocket, value: "30+", label: "Startups Incubated", color: "text-yellow-500" },
   ]
@@ -172,7 +173,9 @@ export default function Component() {
               whileTap={{ scale: 0.98 }}
               className="px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-medium rounded-lg shadow-lg transition-all"
             >
+              <Link to="/about" className="flex items-center gap-2">
               Learn More About Us
+              </Link>
             </motion.button>
           </motion.div>
 

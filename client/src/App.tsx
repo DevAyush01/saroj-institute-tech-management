@@ -16,6 +16,7 @@ import PrivacyPolicy from "./pages/legal/PrivacyPolicy";
 import TermsAndConditions from "./pages/legal/TermsAndConditions"
 import AdmissionProcess from "./pages/admission/AdmissionProcess";
 import CompanyTieUps from "./components/CompanyTieUps";
+import PlacementPage from "./pages/placements/Placements";
 
 
 
@@ -54,7 +55,8 @@ export default function App() {
 
 
 
-         {/* Temp */}
+         {/* Placements */}
+         <Route path="/placements" element={<PlacementPage />} />
 
          
         
