@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react"
 import { ArrowRight } from "lucide-react"
 import logoIbm from "../assets/images/companies/ibm.jpg";
-import logoTcs from "../assets/images/companies/tcs.jpg";
+import logoTcs from "../assets/images/companies/TCS.jpg";
 import logoCisco from "../assets/images/companies/cisco.webp";
 
 export default function CompaniesSlider() {
