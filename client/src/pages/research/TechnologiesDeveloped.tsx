@@ -10,7 +10,7 @@ type Technology = {
 };
 
 const TechnologiesPage: React.FC = () => {
-  const [technologies, setTechnologies] = useState<Technology[]>([
+  const technologies : Technology[] = [
     {
       id: 1,
       title: "Generation of Concave Surfaces with GUI",
@@ -67,7 +67,7 @@ const TechnologiesPage: React.FC = () => {
       department: "Electrical Engineering",
       status: 'transferred'
     }
-  ]);
+  ];
 
   const [filter, setFilter] = useState<'all' | 'transferred' | 'ready'>('all');
 

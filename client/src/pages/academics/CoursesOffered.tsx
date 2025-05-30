@@ -1,13 +1,5 @@
 import React, { useState } from 'react';
 
-interface Course {
-  name: string;
-  duration: string;
-  seats: number;
-}
-
-
-
 const CoursesOffered: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'undergraduate' | 'postgraduate' | 'diploma'>('undergraduate');
 
