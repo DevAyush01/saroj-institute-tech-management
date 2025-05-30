@@ -68,7 +68,7 @@ const RDPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen py-24 bg-gray-50">
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-blue-800 to-indigo-900 text-white py-20 px-4">
         <div className="max-w-6xl mx-auto text-center">

@@ -47,13 +47,16 @@ const Footer = () => {
               </p>
             </div>
             <div className="flex items-start gap-3">
+              <FaPhoneAlt className="text-white mt-1" />
+              <p>
+                0522-3116178
+              </p>
+            </div>
+            <div className="flex items-start gap-3">
               <FaEnvelope className="text-white mt-1" />
               <p>admission.cell@segiko.org</p>
             </div>
-            <div className="flex items-start gap-3">
-              <FaPhoneSquareAlt className="text-white mt-1" />
-              <p>Toll Free No: 1800-180-7886</p>
-            </div>
+            
           </div>
         </div>
 

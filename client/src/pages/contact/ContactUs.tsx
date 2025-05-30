@@ -176,7 +176,7 @@ import GoogelMap from "../../components/GoogleMap"
           </svg>
         ),
         title: "Phone",
-        content: "+91 9555699988, 9810054878 Toll Free: 1800-180-7686",
+        content: "+91 9555699988, 9810054878, Landline: 0522-3116178",
       },
       {
         icon: (
@@ -198,7 +198,7 @@ import GoogelMap from "../../components/GoogleMap"
 
 
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
+      <div className="min-h-screen py-24 bg-gradient-to-br from-blue-50 via-white to-indigo-50">
         {/* Hero Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

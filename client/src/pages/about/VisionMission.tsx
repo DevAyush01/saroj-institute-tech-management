@@ -2,7 +2,7 @@ import React from 'react';
 
 const VisionMissionPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gray-50 py-24 px-4 sm:px-6 lg:px-8 " >
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-16">
@@ -151,7 +151,7 @@ const VisionMissionPage: React.FC = () => {
               <div className="mt-8 flex justify-center">
                 <div className="inline-flex rounded-md shadow">
                   <a
-                    href="/admissions"
+                    href="/courses-offered"
                     className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-white hover:bg-indigo-50"
                   >
                     Explore Admissions

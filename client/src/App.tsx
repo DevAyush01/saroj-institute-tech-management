@@ -16,11 +16,17 @@ import PrivacyPolicy from "./pages/legal/PrivacyPolicy";
 import TermsAndConditions from "./pages/legal/TermsAndConditions"
 import AdmissionProcess from "./pages/admission/AdmissionProcess";
 import PlacementPage from "./pages/placements/Placements";
+import NotFoundPage from "./pages/notFoundPage/NotFoundPage";
+import EligibilityCriteria from "./pages/admission/eligibility";
+import FeeStructure from "./pages/admission/FeeStructure";
+import Chatbot from "./components/ChatBot";
 
 
 
 export default function App() {
   return (
+    <>
+    <Chatbot />
     <Routes>
       <Route path="/" element={<Layout />} >
 
@@ -29,6 +35,11 @@ export default function App() {
         <Route path="/about" element={<About />} />
         <Route path="/chairman-message" element={<ChairmanMessage />} />
         <Route path="/vision-and-mission" element={<VisionMissionPage />} />
+        
+
+        {/* Error Page */}
+        <Route path="*" element={ <NotFoundPage /> } />
+        
 
         {/* Academics  */}
         <Route path="/courses-offered" element={<CoursesOffered />} />
@@ -48,9 +59,12 @@ export default function App() {
         {/* Legal  */}
         <Route path="/privacy-policy" element={ <PrivacyPolicy /> } />
          <Route path="/terms-and-conditions" element={ <TermsAndConditions /> } />
+         
 
          {/* Admission  */}
          <Route path="/admission-process" element={ <AdmissionProcess/> } />
+         <Route path="/eligibility" element={ <EligibilityCriteria /> } />
+         <Route path="/fee-structure" element={ <FeeStructure /> } />
 
 
 
@@ -64,5 +78,6 @@ export default function App() {
 
       </Route>
     </Routes>
+    </>
   )
 }

@@ -3,7 +3,7 @@
 const AdmissionProcess = () => {
   return (
     <div className="bg-white">
-      <div className="max-w-screen-md mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-between">
+      <div className="max-w-screen-md mx-auto pt-24 px-4 sm:px-24 lg:px-24 flex flex-col justify-between">
 
         <div className="text-center">
           <p className="mt-4 text-sm leading-7 text-gray-500 font-regular">

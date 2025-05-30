@@ -4,6 +4,7 @@ import Herobg from "../assets/HeroBanner.jpg";
 import HeroImage1 from "../assets/HeroImg1.jpeg";
 import HeroImage2 from "../assets/HeroImg2.jpeg";
 import HeroImage3 from "../assets/HeroImg3.jpg";
+import { Link } from "react-router-dom";
 
 export default function MainSection() {
   return (
@@ -72,7 +73,10 @@ export default function MainSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
             >
-              <button className="bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-700 hover:bg-gray-900 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full text-base sm:text-lg font-semibold transition-colors duration-200 shadow-lg hover:shadow-xl flex items-center gap-2 mx-auto lg:mx-0">
+              
+              <Link 
+              to="https://seglko.in8.nopaperforms.com/"
+              className="bg-gradient-to-r w-fit from-blue-600 via-blue-700 to-indigo-700 hover:bg-gray-900 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full text-base sm:text-lg font-semibold transition-colors duration-200 shadow-lg hover:shadow-xl flex items-center gap-2 mx-auto lg:mx-0">
                 Register Now
                 <motion.span
                   animate={{ x: [0, 4, 0] }}
@@ -81,7 +85,7 @@ export default function MainSection() {
                 >
                   →
                 </motion.span>
-              </button>
+              </Link>
             </motion.div>
           </div>
 

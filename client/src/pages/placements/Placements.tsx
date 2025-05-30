@@ -95,7 +95,7 @@ const placementData: Student[] = [
 
 function StudentCard({ student }: { student: Student }) {
   return (
-    <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+    <div className="bg-white rounded-lg py-24 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
       <div className="relative">
         <img
           src={`${student.photo}?height=200&width=200`}

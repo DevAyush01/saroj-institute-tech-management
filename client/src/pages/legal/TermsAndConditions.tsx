@@ -90,7 +90,7 @@ export default function TermsAndConditions() {
     ];
 
     return (
-        <div className="relative p-4">
+        <div className="relative py-24 p-4">
             <div className="max-w-3xl mx-auto">
                 <div className="mt-3 bg-white rounded-b lg:rounded-b-none lg:rounded-r flex flex-col justify-between leading-normal">
                     <div>

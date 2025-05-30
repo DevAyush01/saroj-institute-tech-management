@@ -70,7 +70,7 @@ const CentralLibraryPage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen py-24 bg-gray-50">
       {/* Hero Section */}
       <div className="bg-indigo-800 text-white py-16">
         <div className="container mx-auto px-4 text-center">

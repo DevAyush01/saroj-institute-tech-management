@@ -15,6 +15,8 @@ import { FaPersonCircleCheck } from "react-icons/fa6"
 import { FcDocument, FcProcess } from "react-icons/fc"
 import { FiMenu, FiX } from "react-icons/fi"
 
+
+
 // Types
 type DropdownStates = {
   about: boolean
@@ -204,7 +206,7 @@ const Header = () => {
         },
         {
           title: "Fee Structure",
-          to: "/fee-structure",
+          to: '/fee-structure',
           icon: <FcDocument />,
           desc: "Cost breakdown",
         },
@@ -274,7 +276,7 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed w-full z-50 transition-all duration-500 ${
+      className={`fixed w-full  z-50 transition-all duration-500 ${
         scrolled
           ? "bg-white backdrop-blur-md shadow-xl border-b border-gray-100 py-1"
           : "bg-white backdrop-blur-sm py-2"
@@ -416,7 +418,7 @@ const Header = () => {
             {/* CTA Button */}
             <motion.div whileHover={{ scale: 1.05, y: -2 }} whileTap={{ scale: 0.95 }} className="ml-2">
               <Link
-                to="/apply-now"
+                to="https://seglko.in8.nopaperforms.com/"
                 className="px-6 py-2 bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-700 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden group"
               >
                 <span className="relative z-10">Apply Now</span>
