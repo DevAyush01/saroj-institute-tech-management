@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 // Course Images
@@ -14,7 +14,6 @@ import mtechImage from '../assets/images/courseImages/mtech.jpg';
 
 
 const SitmCourses = () => {
-  const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState<
     "undergraduate" | "postgraduate" | "diploma"
   >("undergraduate");

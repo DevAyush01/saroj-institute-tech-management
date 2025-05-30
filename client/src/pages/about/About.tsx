@@ -1,6 +1,5 @@
 import React from 'react';
 import chairmanImg from '../../assets/ChairmanImg.jpg';
-import MainSection from '../../components/MainSection';
 
 const About: React.FC = () => {
   const date = new Date()

@@ -8,7 +8,6 @@ import {
   FlaskConical,
   Rocket,
   Globe,
-  Lightbulb,
   BookOpen,
   ShieldCheck,
   Network,

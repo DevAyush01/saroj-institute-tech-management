@@ -15,7 +15,6 @@ import ContactPage from "./pages/contact/ContactUs";
 import PrivacyPolicy from "./pages/legal/PrivacyPolicy";
 import TermsAndConditions from "./pages/legal/TermsAndConditions"
 import AdmissionProcess from "./pages/admission/AdmissionProcess";
-import CompanyTieUps from "./components/CompanyTieUps";
 import PlacementPage from "./pages/placements/Placements";
 
 

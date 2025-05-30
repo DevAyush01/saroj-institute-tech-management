@@ -6,10 +6,7 @@ interface Course {
   seats: number;
 }
 
-interface CourseCategory {
-  title: string;
-  courses: Course[];
-}
+
 
 const CoursesOffered: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'undergraduate' | 'postgraduate' | 'diploma'>('undergraduate');

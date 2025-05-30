@@ -4,7 +4,6 @@ import {
   FiCalendar,
   FiChevronRight,
   FiFileText,
-  FiImage,
   FiDownload,
   FiX
 } from 'react-icons/fi';

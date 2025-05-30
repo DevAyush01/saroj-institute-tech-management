@@ -6,7 +6,7 @@ import { logo } from "../assets/images"
 
 // Icons
 import { MdKeyboardArrowDown, MdOutlineEmojiPeople, MdSettingsSuggest } from "react-icons/md"
-import { BsPersonGear, BsSearch } from "react-icons/bs"
+import { BsPersonGear } from "react-icons/bs"
 import { HiOutlineBuildingLibrary } from "react-icons/hi2"
 import { IoBookOutline } from "react-icons/io5"
 import { SiRoamresearch } from "react-icons/si"
@@ -34,7 +34,6 @@ const Header = () => {
     research: false,
   })
   const [scrolled, setScrolled] = useState(false)
-  const [searchOpen, setSearchOpen] = useState(false)
   const [hoveredItem, setHoveredItem] = useState<string | null>(null)
   const location = useLocation()
   const { scrollY } = useScroll()

@@ -20,7 +20,6 @@ interface PlacementStat {
 
 export const PlacementSection = () => {
   const [selectedPlacement, setSelectedPlacement] = useState<PlacementRecord | null>(null);
-  const [activeTab, setActiveTab] = useState<'current' | 'past'>('current');
 
   const placementStats: PlacementStat[] = [
     { title: "Placement Rate", value: "92%", icon: "📈" },
@@ -29,16 +28,7 @@ export const PlacementSection = () => {
     { title: "Students Placed", value: "650+", icon: "🎓" },
   ];
 
-  
 
-  const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
-    return date.toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'
-    });
-  };
 
   return (
     <div className="bg-gray-50 min-h-screen py-8 px-4 sm:px-6 lg:px-8">

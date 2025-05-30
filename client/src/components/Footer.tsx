@@ -1,5 +1,4 @@
-import React from "react";
-import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaPhoneSquareAlt, FaUniversity, FaGavel } from "react-icons/fa";
+import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaPhoneSquareAlt, FaGavel } from "react-icons/fa";
 import { IoIosArrowForward } from "react-icons/io";
 import { Link } from "react-router-dom";
 import Logo from "../assets/logo.png"
