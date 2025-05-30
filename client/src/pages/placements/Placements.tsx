@@ -106,7 +106,7 @@ function StudentCard({ student }: { student: Student }) {
         <div className="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
           {student.package}
         </div>
-      </div>
+      </div>      
       <div className="p-6">
         <h3 className="text-xl font-bold text-gray-900 mb-2">{student.name}</h3>
         <div className="space-y-2">
