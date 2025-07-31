@@ -1,6 +1,7 @@
 import AboutSITM from "./AboutSection";
 import Chatbot from "./ChatBot";
 import CompaniesSlider from "./CompanyTieUps";
+import InstagramFeed from "./InstagramFeed";
 import MainSection from "./MainSection";
 import { PlacementSection } from "./PlacementSection";
 import SitmCourses from "./SitmCourses";
@@ -14,6 +15,7 @@ export default function Home() {
     <CompaniesSlider />
     <SitmCourses/>
     <PlacementSection/>
+    <InstagramFeed />
 
     </>
   )
