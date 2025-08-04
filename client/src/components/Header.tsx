@@ -14,6 +14,7 @@ import { GrTechnology } from "react-icons/gr"
 import { FaPersonCircleCheck } from "react-icons/fa6"
 import { FcDocument, FcProcess } from "react-icons/fc"
 import { FiMenu, FiX } from "react-icons/fi"
+import TopInfoBar from "./TopInfoBar"
 
 
 
@@ -282,6 +283,7 @@ const Header = () => {
           : "bg-white backdrop-blur-sm py-2"
       }`}
     >
+       <TopInfoBar />
       <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}

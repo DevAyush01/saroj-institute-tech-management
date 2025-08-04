@@ -10,7 +10,7 @@ export default function MainSection() {
   return (
     <div
       style={{ backgroundImage: `url(${Herobg})` }}
-      className="min-h-screen  lg:py-10 relative overflow-hidden bg-cover bg-center"
+      className="min-h-screen  lg:py-24 relative overflow-hidden bg-cover bg-center"
     >
       {/* Floating Decorative Orbs */}
       {[...Array(10)].map((_, i) => (
