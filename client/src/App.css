@@ -2,3 +2,13 @@
   user-select: none;
   pointer-events: none;
 }
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.swiper-button-disabled {
+  opacity: 0.5;
+}

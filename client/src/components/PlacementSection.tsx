@@ -1,184 +1,215 @@
-import { useState } from 'react';
+import { IndianRupee, Building2, GraduationCap, ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Navigation } from "swiper/modules";
+import 'swiper/css';
+import 'swiper/css/navigation';
 
-interface PlacementRecord {
+interface Student {
   id: number;
+  name: string;
   company: string;
-  logo: string;
-  date: string;
-  studentsPlaced: number;
-  highestPackage: string;
-  averagePackage: string;
-  description: string;
-  isFeatured?: boolean;
+  package: string;
+  role: string;
+  date?: string;
+  photo: string;
 }
 
-interface PlacementStat {
-  title: string;
-  value: string;
-  icon: string;
-}
+// Combined data from both your code snippets
+const placedStudents: Student[] = [
+  {
+    id: 8,
+    name: "Shaloni Devi",
+    company: "Max Health Care",
+    package: "18 LPA",
+    role: "B Pharma",
+    date: "22/03/2025",
+    photo: '/placed-students/shaloni-devi.webp',
+  },
+  {
+    id: 1,
+    name: "Harsh Dixit",
+    company: "Eclat Health",
+    package: "4 LPA",
+    role: "B Pharma",
+    date: "29/04/2025",
+    photo: '/placed-students/harsh-dixit.webp',
+  },
+  {
+    id: 2,
+    name: "Mansi Sahu",
+    company: "Eclat Health",
+    package: "3 LPA",
+    role: "B Pharma",
+    date: "29/04/2025",
+    photo: "/placed-students/mansi-sahu.webp",
+  },
+  {
+    id: 3,
+    name: "Surendra Pratap",
+    company: "Eclat Health",
+    package: "4 LPA",
+    role: "B Pharma",
+    date: "29/04/2025",
+    photo: "/placed-students/surendra-pratap.webp",
+  },
+  {
+    id: 4,
+    name: "Pranjali Singh",
+    company: "Eclat Health",
+    package: "4 LPA",
+    role: "B Pharma",
+    date: "29/04/2025",
+    photo: "/placed-students/pranjali-singh.webp",
+  },
+  {
+    id: 5,
+    name: "Ajay Pratap Yadav",
+    company: "Max Health Care",
+    package: "3 LPA",
+    role: "B Pharma",
+    date: "08/04/2025",
+    photo: "/placed-students/ajay-pratap-yadav.webp",
+  },
+  {
+    id: 6,
+    name: "Piyush Pandey",
+    company: "Max Health Care",
+    package: "3 LPA",
+    role: "B Pharma",
+    date: "08/04/2025",
+    photo: "/placed-students/piyush-pandey.webp",
+  },
+  {
+    id: 7,
+    name: "Pratit Srivastava",
+    company: "Max Health Care",
+    package: "4 LPA",
+    role: "B Pharma",
+    date: "08/04/2025",
+    photo: "/placed-students/pratit-srivastava.webp",
+  },
+];
 
-export const PlacementSection = () => {
-  const [selectedPlacement, setSelectedPlacement] = useState<PlacementRecord | null>(null);
-
-  const placementStats: PlacementStat[] = [
-    { title: "Placement Rate", value: "92%", icon: "📈" },
-    { title: "Highest Package", value: "₹42 LPA", icon: "💰" },
-    { title: "Companies Visited", value: "85+", icon: "🏢" },
-    { title: "Students Placed", value: "650+", icon: "🎓" },
-  ];
-
-
-
-  return (
-    <div className="bg-gray-50 min-h-screen py-8 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-6xl mx-auto">
-        {/* Header with Institute Info */}
-        <div className="bg-white shadow-md rounded-lg p-6 mb-8 border-l-4 border-sky-600">
-          <h1 className="text-3xl font-bold text-center text-sky-600 mb-4">
-            SAROJ INSTITUTE OF TECHNOLOGY & MANAGEMENT (SITM), LUCKNOW
-          </h1>
-          <p className="text-center text-gray-600 mb-2">
-            Ahimamau, Arjunganj, Sultanpur Road, Lucknow, Uttar Pradesh, India, 226001
-          </p>
-          <p className="text-center text-gray-600">
-            <span className=' font-bold ' >Phone no:</span> 0522-3116178, 9555699988 |  <span className=' font-bold ' >E-mail:</span> admission.cell@seglko.org
-          </p>
+const StudentCard = ({ student }: { student: Student }) => (
+  <motion.div 
+    whileHover={{ y: -10 }}
+    transition={{ duration: 0.3 }}
+    className="bg-white rounded-3xl shadow-lg overflow-hidden h-full flex flex-col border border-gray-100/50"
+  >
+    <div className="relative pt-10 flex justify-center">
+      <div className="relative h-28 w-28 rounded-full overflow-hidden border-4 border-white shadow-xl">
+        <img
+          src={student.photo}
+          alt={student.name}
+          className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+          loading="lazy"
+        />
+      </div>
+      <div className="absolute top-4 right-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-3 py-1 rounded-full text-xs font-bold flex items-center shadow-md">
+        <IndianRupee className="h-3 w-3 mr-1" />
+        {student.package}
+      </div>
+    </div>
+    <div className="p-6 text-center flex-grow">
+      <h3 className="text-xl font-bold text-gray-900 mb-3">{student.name}</h3>
+      <div className="space-y-3">
+        <div className="flex items-center justify-center bg-gray-50 px-4 py-2 rounded-full">
+          <Building2 className="h-4 w-4 mr-2 text-blue-500" />
+          <span className="font-medium">{student.company}</span>
         </div>
-
-        {/* Placement Section Title */}
-        <div className="flex justify-between items-center mb-6">
-          <h2 className="text-2xl font-bold text-gray-600">Placement Records</h2>
-          
+        <div className="flex items-center justify-center bg-gray-50 px-4 py-2 rounded-full">
+          <GraduationCap className="h-4 w-4 mr-2 text-purple-500" />
+          <span className="font-medium">{student.role}</span>
         </div>
-
-        {/* Stats Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-          {placementStats.map((stat, index) => (
-            <div key={index} className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-              <div className="text-3xl mb-2">{stat.icon}</div>
-              <h3 className="text-lg font-semibold text-gray-700">{stat.title}</h3>
-              <p className="text-2xl font-bold text-sky-600">{stat.value}</p>
-            </div>
-          ))}
-        </div>
-
-       
-
-        
-
-        {/* Upcoming Drives Section */}
-        <div className="mt-12">
-          <h2 className="text-2xl font-bold text-gray-600 mb-6">Upcoming Placement Drives</h2>
-          <div className="bg-white rounded-lg shadow-sm overflow-hidden">
-            <table className="min-w-full divide-y divide-gray-200">
-              <thead className="bg-gray-50">
-                <tr>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Company</th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Eligibility</th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Roles</th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Action</th>
-                </tr>
-              </thead>
-              <tbody className="bg-white divide-y divide-gray-200">
-                <tr className="hover:bg-gray-50">
-                  <td className="px-6 py-4 whitespace-nowrap">
-                    <div className="flex items-center">
-                      <div className="flex-shrink-0 h-10 w-10">
-                        <img className="h-10 w-10 object-contain" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Accenture.svg/1200px-Accenture.svg.png" alt="Google" />
-                      </div>
-                      <div className="ml-4">
-                        <div className="text-sm font-medium text-gray-900">Accenture</div>
-                      </div>
-                    </div>
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">CGPA ≥ 8.0</td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Software Engineer</td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                     <button disabled className="text-gray-400">Register <span>(Sarting Soon)</span></button>
-                  </td>
-                </tr>
-                <tr className="hover:bg-gray-50">
-                  <td className="px-6 py-4 whitespace-nowrap">
-                    <div className="flex items-center">
-                      <div className="flex-shrink-0 h-10 w-10">
-                        <img className="h-10 w-10 object-contain" src="https://discover.give.do/static/img/logos/19WJ/9aad65c4-4ada-437d-a056-cd099c1e88ef.png" alt="Adobe" />
-                      </div>
-                      <div className="ml-4">
-                        <div className="text-sm font-medium text-gray-900">TCS</div>
-                      </div>
-                    </div>
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">CGPA ≥ 7.5</td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Product Developer</td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                     <button disabled className="text-gray-400">Register <span>(Sarting Soon)</span></button>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        {/* Placement Detail Modal */}
-        {selectedPlacement && (
-          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
-            <div className="bg-white rounded-lg max-w-3xl w-full max-h-[90vh] overflow-y-auto">
-              <div className="p-6">
-                <div className="flex justify-between items-start mb-4">
-                  <div>
-                    <h2 className="text-2xl font-bold text-gray-600">{selectedPlacement.company}</h2>
-                    <p className="text-gray-500">{selectedPlacement.date}</p>
-                  </div>
-                  <button 
-                    onClick={() => setSelectedPlacement(null)}
-                    className="text-gray-500 hover:text-gray-700 text-2xl"
-                  >
-                    &times;
-                  </button>
-                </div>
-                
-                <div className="flex flex-col md:flex-row mb-6">
-                  <div className="md:w-1/3 mb-4 md:mb-0 flex justify-center">
-                    <img 
-                      src={selectedPlacement.logo} 
-                      alt={selectedPlacement.company} 
-                      className="h-32 object-contain"
-                    />
-                  </div>
-                  <div className="md:w-2/3 md:pl-6">
-                    <div className="grid grid-cols-2 gap-4 mb-4">
-                      <div className="bg-sky-50 p-3 rounded-lg">
-                        <p className="text-sm text-gray-500">Students Placed</p>
-                        <p className="text-xl font-bold">{selectedPlacement.studentsPlaced}</p>
-                      </div>
-                      <div className="bg-green-50 p-3 rounded-lg">
-                        <p className="text-sm text-gray-500">Highest Package</p>
-                        <p className="text-xl font-bold text-green-600">{selectedPlacement.highestPackage}</p>
-                      </div>
-                      <div className="bg-purple-50 p-3 rounded-lg">
-                        <p className="text-sm text-gray-500">Average Package</p>
-                        <p className="text-xl font-bold">{selectedPlacement.averagePackage}</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="prose max-w-none mb-6">
-                  <h3 className="text-lg font-bold mb-2">Placement Details</h3>
-                  <p className="text-gray-700">{selectedPlacement.description}</p>
-                </div>
-                
-                <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6">
-                  <h3 className="font-bold text-yellow-600 mb-2">Student Testimonials</h3>
-                  <p className="text-gray-700 italic">"The placement process was very well organized. The training sessions conducted by the placement cell helped me prepare thoroughly for the interviews."</p>
-                  <p className="text-sm text-gray-500 mt-2">- Rahul Sharma, Placed at {selectedPlacement.company}</p>
-                </div>
-              </div>
-            </div>
+        {student.date && (
+          <div className="text-sm text-gray-500 mt-2">
+            Placed on: {student.date}
           </div>
         )}
       </div>
     </div>
+  </motion.div>
+);
+
+const PlacedStudentsSlider = () => {
+  return (
+    <section className="py-16 bg-gradient-to-b from-gray-50 to-white">
+      <div className="container mx-auto px-4">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="text-center mb-12"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Placed</span> Students
+          </h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Celebrating the achievements of our graduates
+          </p>
+        </motion.div>
+
+        <div className="relative px-10">
+          <Swiper
+            modules={[Autoplay, Navigation]}
+            spaceBetween={30}
+            slidesPerView={1}
+            breakpoints={{
+              640: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
+              1280: { slidesPerView: 4 }
+            }}
+            autoplay={{ 
+              delay: 5000,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true
+            }}
+            navigation={{
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            }}
+            loop
+          >
+            {placedStudents.map((student) => (
+              <SwiperSlide key={student.id} className="h-auto pb-10">
+                <StudentCard student={student} />
+              </SwiperSlide>
+            ))}
+
+            <div className="swiper-button-prev !left-0 !text-white !w-12 !h-12 !rounded-full !bg-blue-600/80 hover:!bg-blue-600 !shadow-lg after:!text-sm"></div>
+            <div className="swiper-button-next !right-0 !text-white !w-12 !h-12 !rounded-full !bg-blue-600/80 hover:!bg-blue-600 !shadow-lg after:!text-sm"></div>
+          </Swiper>
+        </div>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.3 }}
+          viewport={{ once: true }}
+          className="text-center mt-12"
+        >
+          <a
+            href="/placements"
+            className="inline-flex items-center justify-center px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+          >
+            View All Success Stories <ArrowRight className="h-5 w-5 ml-2" />
+          </a>
+        </motion.div>
+      </div>
+
+      <style >{`
+        .swiper-button-next:after, .swiper-button-prev:after {
+          font-size: 1rem;
+          font-weight: bold;
+        }
+        .swiper-button-disabled {
+          opacity: 0.5;
+        }
+      `}</style>
+    </section>
   );
 };
+
+export default PlacedStudentsSlider;

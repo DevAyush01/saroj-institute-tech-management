@@ -5,7 +5,7 @@ import FloatingAdmissionBanner from "./FloatingTimer";
 
 import InstagramFeed from "./InstagramFeed";
 import MainSection from "./MainSection";
-import { PlacementSection } from "./PlacementSection";
+import PlacementSection from "./PlacementSection";
 import SitmCourses from "./SitmCourses";
 import TopInfoBar from "./TopInfoBar";
 
