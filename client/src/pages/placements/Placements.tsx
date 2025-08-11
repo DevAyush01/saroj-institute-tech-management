@@ -3,9 +3,11 @@ import {
   Building2,
   IndianRupee,
   GraduationCap,
+  ArrowRight
 } from "lucide-react";
+import { motion } from "framer-motion";
+import { useState } from "react";
 
-// Interface for student placement data
 interface Student {
   id: number;
   name: string;
@@ -91,98 +93,163 @@ const placementData: Student[] = [
   },
 ];
 
-
-
 function StudentCard({ student }: { student: Student }) {
   return (
-    <div className="bg-white rounded-lg py-24 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-      <div className="relative">
-        <img
-          src={`${student.photo}?height=200&width=200`}
-          alt={student.name}
-          className="w-full h-64 object-cover"
-        />
-        <div className="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+    <motion.div 
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 group flex flex-col h-full"
+    >
+      <div className="relative pt-8 flex justify-center">
+        <div className="relative h-32 w-32 rounded-full overflow-hidden border-4 border-white shadow-md">
+          <img
+            src={`${student.photo}?height=300&width=300`}
+            alt={student.name}
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          />
+        </div>
+        <div className="absolute top-4 right-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-3 py-1 rounded-full text-xs font-bold flex items-center">
+          <IndianRupee className="h-3 w-3 mr-1" />
           {student.package}
         </div>
       </div>      
-      <div className="p-6">
-        <h3 className="text-xl font-bold text-gray-900 mb-2">{student.name}</h3>
-        <div className="space-y-2">
+      <div className="p-6 flex-grow">
+        <h3 className="text-xl font-bold text-gray-900 mb-2 text-center">{student.name}</h3>
+        <div className="space-y-3">
           <div className="flex items-center text-gray-600">
-            <Building2 className="h-4 w-4 mr-2" />
-            <span className="text-sm">{student.company}</span>
+            <Building2 className="h-5 w-5 mr-2 text-blue-500 min-w-[20px]" />
+            <span className="text-sm md:text-base truncate">{student.company}</span>
           </div>
           <div className="flex items-center text-gray-600">
-            <GraduationCap className="h-4 w-4 mr-2" />
-            <span className="text-sm">{student.role}</span>
+            <GraduationCap className="h-5 w-5 mr-2 text-purple-500 min-w-[20px]" />
+            <span className="text-sm md:text-base">{student.role}</span>
           </div>
           <div className="flex items-center text-gray-600">
-            <Calendar className="h-4 w-4 mr-2" />
-            <span className="text-sm">{student.date}</span>
-          </div>
-          <div className="flex items-center text-gray-600">
-            <IndianRupee className="h-4 w-4 mr-2" />
-            <span className="text-sm font-semibold text-green-600">
-              {student.package}
-            </span>
+            <Calendar className="h-5 w-5 mr-2 text-green-500 min-w-[20px]" />
+            <span className="text-sm md:text-base">{student.date}</span>
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
 function PlacementPage() {
+  const [filter, setFilter] = useState<string>("all");
+
+  const filteredStudents = filter === "all" 
+    ? placementData 
+    : placementData.filter(student => student.company.toLowerCase().includes(filter.toLowerCase()));
 
   return (
-      <div className="min-h-screen bg-gray-50">
-        <header className="bg-gradient-to-r pt-10 from-blue-600 to-purple-700 text-white">
-          <div className="container mx-auto px-4 py-16 text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-4">
-              Students Placed
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 opacity-90">
-              Placement Success Stories 2025
-            </p>
-          </div>
-        </header>
-
-        <main className="container mx-auto px-4 py-12">
-         
-
-          <section>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {placementData.map((student) => (
-                <StudentCard key={student.id} student={student} />
-              ))}
-            </div>
-            {placementData.length === 0 && (
-              <div className="text-center py-12">
-                <p className="text-gray-500 text-lg">
-                  No students found for the selected company.
-                </p>
-              </div>
-            )}
-          </section>
-
-          <section className="mt-16 bg-gradient-to-r from-blue-600 to-purple-700 rounded-lg text-white p-8 text-center">
-            <h3 className="text-2xl font-bold mb-4">Ready to Start Your Career?</h3>
-            <p className="text-lg mb-6 opacity-90">
-              Join Saroj College of Engineering and Polytechnic and become part of our success
-              story
-            </p>
-            <a
-              href="https://seglko.in8.nopaperforms.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-white text-blue-600 font-semibold px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors duration-300"
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
+      <header className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/90 to-purple-700/90 z-0"></div>
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1470&auto=format&fit=crop')] bg-cover bg-center opacity-20 z-0"></div>
+        
+        <div className="container mx-auto px-4 py-16 md:py-24 text-center relative z-10">
+          <motion.h1 
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 text-white px-4"
+          >
+            Our <span className="text-yellow-300">Success</span> Stories
+          </motion.h1>
+          <motion.p 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+            className="text-lg md:text-xl lg:text-2xl mb-8 text-white/90 px-4"
+          >
+            Class of 2025 Placements
+          </motion.p>
+          
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.4, duration: 0.5 }}
+            className="flex flex-wrap justify-center gap-2 md:gap-3 mt-6 px-4"
+          >
+            <button 
+              onClick={() => setFilter("all")}
+              className={`px-3 py-1 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-medium transition-all ${filter === "all" ? 'bg-white text-blue-600 shadow-md' : 'bg-white/10 text-white hover:bg-white/20'}`}
             >
-              Apply Now
-            </a>
-          </section>
-        </main>
-      </div>
+              All
+            </button>
+            <button 
+              onClick={() => setFilter("Max Health Care")}
+              className={`px-3 py-1 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-medium transition-all ${filter === "Max Health Care" ? 'bg-white text-blue-600 shadow-md' : 'bg-white/10 text-white hover:bg-white/20'}`}
+            >
+              Max Health
+            </button>
+            <button 
+              onClick={() => setFilter("Eclat Health")}
+              className={`px-3 py-1 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-medium transition-all ${filter === "Eclat Health" ? 'bg-white text-blue-600 shadow-md' : 'bg-white/10 text-white hover:bg-white/20'}`}
+            >
+              Eclat Health
+            </button>
+          </motion.div>
+        </div>
+      </header>
+
+      <main className="container mx-auto px-4 py-12">
+        <motion.section
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.2, duration: 0.5 }}
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+        >
+          {filteredStudents.map((student) => (
+            <StudentCard key={student.id} student={student} />
+          ))}
+        </motion.section>
+        
+        {filteredStudents.length === 0 && (
+          <div className="text-center py-12">
+            <div className="bg-white p-6 md:p-8 rounded-2xl shadow-lg inline-block max-w-md mx-auto">
+              <h3 className="text-lg md:text-xl font-bold text-gray-700 mb-2">No placements found</h3>
+              <p className="text-gray-500 text-sm md:text-base">
+                No students found for the selected company. Try another filter.
+              </p>
+            </div>
+          </div>
+        )}
+
+        <motion.section 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="mt-16 md:mt-24 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl text-white p-6 md:p-10 text-center relative overflow-hidden"
+        >
+          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1470&auto=format&fit=crop')] bg-cover bg-center opacity-10"></div>
+          <div className="relative z-10">
+            <h3 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6">Ready to Start Your Career Journey?</h3>
+            <p className="text-base md:text-xl mb-6 max-w-2xl mx-auto">
+              Join Saroj College and become part of our legacy of successful placements
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center gap-3 md:gap-4">
+              <a
+                href="https://seglko.in8.nopaperforms.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white text-blue-600 font-semibold px-6 py-3 md:px-8 md:py-4 rounded-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-xl"
+              >
+                Apply Now <ArrowRight className="h-4 w-4 md:h-5 md:w-5 ml-2" />
+              </a>
+              <a
+                href="/contact"
+                className="bg-transparent border-2 border-white text-white font-semibold px-6 py-3 md:px-8 md:py-4 rounded-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-center"
+              >
+                Contact Us <ArrowRight className="h-4 w-4 md:h-5 md:w-5 ml-2" />
+              </a>
+            </div>
+          </div>
+        </motion.section>
+      </main>
+    </div>
   );
 }
 
