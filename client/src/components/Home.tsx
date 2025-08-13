@@ -12,6 +12,7 @@ import TopInfoBar from "./TopInfoBar";
 export default function Home() {
   return (
     <>
+
     <FloatingAdmissionBanner />
     <MainSection />
     <Chatbot/>
